@@ -1,0 +1,11 @@
+---
+import cssLogo from "../assets/css.light.svg";
+import { Image } from "astro:assets";
+---
+
+<header class="p-4 bg-rebeccapurple text-white">
+  <a href="/" class="flex items-center gap-2">
+    <Image src={cssLogo} alt="CSS Logo" width="32" />
+    <h1 class="text-2xl">Modern CSS</h1>
+  </a>
+</header>
