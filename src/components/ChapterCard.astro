@@ -1,0 +1,9 @@
+---
+const { chapter, title } = Astro.props;
+---
+
+<div class="bg-slate-50 border border-slate-200 rounded-md flex flex-col gap-2 p-4">
+    <div class="text-slate-500">Chapter {chapter}</div>
+    <h3 class="font-bold">{title}</h3>
+    <slot />
+</div>

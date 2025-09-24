@@ -1,61 +1,110 @@
 ---
 import { Image } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
+import Layout from '../layouts/Layout.astro';
 import bookImage from '../assets/book.png';
 import joeImage from '../assets/joeattardi.png';
+import ChapterCard from '../components/ChapterCard.astro';
 ---
 
 <Layout>
-    <div
-        class="my-16 flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-16 md:items-start"
-    >
-        <div class="flex flex-col items-center md:flex-grow gap-4">
-            <h2 class="text-5xl text-center font-light md:text-8xl">Modern CSS</h2>
-            <h3 class="md:text-4xl">Second Edition</h3>
-            <h3 class="text-xl">By Joe Attardi</h3>
-            <p class="text-lg text-center md:text-2xl md:text-left text-slate-600">
-                Master the art of modern CSS with this comprehensive guide. Learn how to create
-                beautiful, responsive, and performant web designs.
-            </p>
-            <ul class="flex items-center gap-4">
-                <li class="flex items-center">
-                    <Icon name="ph:dot-duotone" size={32} class="text-rebeccapurple" />
-                    300+ pages
-                </li>
-                <li class="flex items-center">
-                    <Icon name="ph:dot-duotone" size={32} class="text-rebeccapurple" />
-                    Updated 2025
-                </li>
-            </ul>
-            <div class="bg-amber-300 px-2 py-1 rounded">Available Soon</div>
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-                class="bg-rebeccapurple text-white px-4 py-2 rounded flex items-center gap-2"
-                href="https://www.amazon.com/Modern-CSS-Master-Concepts-Development/dp/B0FD2FQV3D"
-            >
-                Preorder from Amazon
-                <Icon name="ph:arrow-square-out" />
-            </a>
-        </div>
-        <Image src={bookImage} class="w-48 md:w-1/3" alt="Modern CSS book cover" />
-    </div>
-    <div class="my-16">
-        <h2 class="text-4xl text-center font-light mb-8">About the Author</h2>
-        <div class="flex flex-col md:flex-row items-center gap-8 md:items-start">
-            <Image src={joeImage} alt="Photo of Joe Attardi" class="w-32 h-32 rounded-full" />
-            <div class="flex-1">
-                <p class="text-lg text-slate-600 text-center md:text-left">
-                    Joe Attardi is a software engineer from the Boston area, specializing in
-                    front-end development. He has over 20 years of experience working with web
-                    technologies such as JavaScript, TypeScript, HTML, and CSS. He has built rich
-                    front-end experiences for companies such as Dell, Constant Contact, and
-                    Salesforce. He is also the author of Using Gatsby and Netlify CMS (Apress, 2020) 
-                    and Web API Cookbook (O'Reilly, 2024). You can find him on X at 
-                    <a class="text-link" href="https://x.com/JoeAttardi">@JoeAttardi</a>.
+    <div class="flex flex-col gap-8">
+        <section
+            class="my-16 flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-16 md:items-start"
+        >
+            <div class="flex flex-col items-center md:flex-grow gap-4">
+                <h2 class="text-5xl text-center font-light md:text-8xl">Modern CSS</h2>
+                <h3 class="md:text-4xl">Second Edition</h3>
+                <h3 class="text-xl">By Joe Attardi</h3>
+                <p class="text-lg text-center md:text-2xl md:text-left text-slate-600">
+                    Master the art of modern CSS with this comprehensive guide. Learn how to create
+                    beautiful, responsive, and performant web designs.
                 </p>
+                <ul class="flex items-center gap-4">
+                    <li class="flex items-center">
+                        <Icon name="ph:dot-duotone" size={32} class="text-rebeccapurple" />
+                        300+ pages
+                    </li>
+                    <li class="flex items-center">
+                        <Icon name="ph:dot-duotone" size={32} class="text-rebeccapurple" />
+                        Updated 2025
+                    </li>
+                </ul>
+                <div class="bg-amber-300 px-2 py-1 rounded">Available Soon</div>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="bg-rebeccapurple text-white px-4 py-2 rounded flex items-center gap-2"
+                    href="https://www.amazon.com/Modern-CSS-Master-Concepts-Development/dp/B0FD2FQV3D"
+                >
+                    Preorder from Amazon
+                    <Icon name="ph:arrow-square-out" />
+                </a>
             </div>
-        </div>
+            <Image src={bookImage} class="w-48 md:w-1/3" alt="Modern CSS book cover" />
+        </section>
+
+        <section class="flex flex-col gap-8">
+            <h2 class="text-4xl text-center font-light">What You'll Learn</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <ChapterCard title="Introduction to CSS" chapter="1">
+                    Get started with CSS fundamentals and understand its role in modern web development.
+                </ChapterCard>
+                <ChapterCard title="CSS Rules and Selectors" chapter="2">
+                    Master the art of targeting elements with powerful and efficient selectors.
+                </ChapterCard>
+                <ChapterCard title="Basic CSS Concepts" chapter="3">
+                    Learn about the box model, specificity, and inheritance.
+                </ChapterCard>
+                <ChapterCard title="Basic Styling" chapter="4">
+                    Explore colors, units, and basic styling properties.
+                </ChapterCard>
+                <ChapterCard title="Backgrounds and Gradients" chapter="5">
+                    Create stunning backgrounds using gradients, patterns, and images.
+                </ChapterCard>
+                <ChapterCard title="Text Styling" chapter="6">
+                    Learn typography, text effects, and advanced text styling techniques.
+                </ChapterCard>
+                <ChapterCard title="Layout and Positioning" chapter="7">
+                    Master the art of positioning elements and creating complex layouts.
+                </ChapterCard>
+                <ChapterCard title="Transforms" chapter="8">
+                    Transform elements in 2D and 3D space with CSS transforms.
+                </ChapterCard>
+                <ChapterCard title="Transitions and Animations" chapter="9">
+                    Bring your designs to life with smooth transitions and animations.
+                </ChapterCard>
+                <ChapterCard title="Flexbox" chapter="10">
+                    Create flexible and responsive layouts with CSS Flexbox.
+                </ChapterCard>
+                <ChapterCard title="CSS Grid" chapter="11">
+                    Master the powerful CSS Grid layout system. Updated to cover subgrid.
+                </ChapterCard>
+                <ChapterCard title="Responsive Design" chapter="12">
+                    Learn how to make your designs work across all devices.
+                </ChapterCard>
+                <ChapterCard title="Wrap Up" chapter="13">
+                    Catch up on some other new CSS features.
+                </ChapterCard>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-8">
+            <h2 class="text-4xl text-center font-light">About the Author</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 md:items-start">
+                <Image src={joeImage} alt="Photo of Joe Attardi" class="w-32 h-32 rounded-full" />
+                <div class="flex-1">
+                    <p class="text-lg text-slate-600 text-center md:text-left">
+                        Joe Attardi is a software engineer from the Boston area, specializing in
+                        front-end development. He has over 20 years of experience working with web
+                        technologies such as JavaScript, TypeScript, HTML, and CSS. He has built
+                        rich front-end experiences for companies such as Dell, Constant Contact, and
+                        Salesforce. He is also the author of Using Gatsby and Netlify CMS (Apress,
+                        2020) and Web API Cookbook (O'Reilly, 2024). You can find him on X at
+                        <a class="text-link" href="https://x.com/JoeAttardi">@JoeAttardi</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
 </Layout>
