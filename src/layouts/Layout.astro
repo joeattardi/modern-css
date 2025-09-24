@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
 import Header from '../components/Header.astro';
-import '@fontsource/inter';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/reddit-mono';
 ---
 
 <!doctype html>
@@ -15,7 +16,9 @@ import '@fontsource/inter';
 	</head>
 	<body>
 		<Header />
-		<slot />
+		<main class="max-w-7xl mx-auto p-4">
+			<slot />
+		</main>
 	</body>
 </html>
 
