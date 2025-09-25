@@ -20,7 +20,7 @@ import ChapterCard from '../components/ChapterCard.astro';
                     Master the art of modern CSS with this comprehensive guide. Learn how to create
                     beautiful, responsive, and performant web designs.
                 </p>
-                <ul class="flex items-center gap-4">
+                <ul class="flex flex-col md:flex-row gap-0 items-center md:gap-4">
                     <li class="flex items-center">
                         <Icon name="ph:dot-duotone" size={32} class="text-rebeccapurple" />
                         300+ pages
@@ -46,7 +46,7 @@ import ChapterCard from '../components/ChapterCard.astro';
 
         <section class="flex flex-col gap-8 scroll-mt-16 bg-rose-50 border border-rose-100 rounded-lg p-8" id="contents">
             <h2 class="text-4xl text-center font-light">What You'll Learn</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <ChapterCard title="Introduction to CSS" chapter="1">
                     Get started with CSS fundamentals and understand its role in modern web development.
                 </ChapterCard>
