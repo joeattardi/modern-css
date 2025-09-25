@@ -1,11 +1,26 @@
 ---
 import { Image } from 'astro:assets';
 import cssLogo from '../assets/css.light.svg';
+import ScrollTo from './ScrollTo.astro';
 ---
 
-<header class="p-2 bg-rebeccapurple text-white">
-    <a href="/" class="flex items-center gap-2">
+<header class="p-2 bg-rebeccapurple text-white flex items-center gap-4 fixed w-full top-0">
+    <button class="cursor-pointer flex items-center gap-2" id="top-link">
         <Image src={cssLogo} alt="CSS Logo" width="24" />
         <h1 class="text-xl font-extrabold">Modern CSS</h1>
-    </a>
+    </button>
+    <ScrollTo target="contents">Contents</ScrollTo>
+    <ScrollTo target="bio">About the Author</ScrollTo>
 </header>
+
+<script>
+    const topLink = document.getElementById('top-link');
+    if (topLink) {
+        topLink.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+</script>

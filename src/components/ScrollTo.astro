@@ -1,0 +1,28 @@
+---
+interface Props {
+    target: string;
+}
+
+const { target } = Astro.props;
+---
+
+<button class="hidden md:block cursor-pointer text-white hover:text-rebeccapurple px-2 rounded hover:bg-purple-100" data-scroll-to={target}>
+    <slot />
+</button>
+
+<script>
+    document.querySelectorAll('[data-scroll-to]').forEach((button) => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-scroll-to');
+
+            if (targetId) {
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+</script>

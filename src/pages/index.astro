@@ -8,7 +8,7 @@ import ChapterCard from '../components/ChapterCard.astro';
 ---
 
 <Layout>
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-8 mt-12">
         <section
             class="bg-violet-50 border border-violet-200 p-8 rounded-lg flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-16 md:items-start"
         >
@@ -44,7 +44,7 @@ import ChapterCard from '../components/ChapterCard.astro';
             <Image src={bookImage} class="w-48 md:w-1/3 ml-6" alt="Modern CSS book cover" />
         </section>
 
-        <section class="flex flex-col gap-8">
+        <section class="flex flex-col gap-8 scroll-mt-16 bg-rose-50 border border-rose-100 rounded-lg p-8" id="contents">
             <h2 class="text-4xl text-center font-light">What You'll Learn</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <ChapterCard title="Introduction to CSS" chapter="1">
@@ -89,7 +89,7 @@ import ChapterCard from '../components/ChapterCard.astro';
             </div>
         </section>
 
-        <section class="flex flex-col gap-8">
+        <section class="flex flex-col gap-8 bg-blue-50 p-8 rounded-lg border border-blue-100 scroll-mt-16" id="bio">
             <h2 class="text-4xl text-center font-light">About the Author</h2>
             <div class="flex flex-col md:flex-row items-center gap-8 md:items-start">
                 <Image src={joeImage} alt="Photo of Joe Attardi" class="w-32 h-32 rounded-full" />
