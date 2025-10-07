@@ -41,14 +41,11 @@ import ChapterCard from '../components/ChapterCard.astro';
                     <Icon name="ph:arrow-square-out" />
                 </a>
                 <div>Also available from:</div>
-                <ul class="flex items-center gap-4">
-                    <li><a class="flex items-center gap-1" target="_blank" href="https://www.barnesandnoble.com/w/modern-css-joe-attardi/1137355059?ean=9798868817267">Barnes &amp; Noble <Icon name="ph:arrow-square-out" /></a></li>
-                    <li class="text-zinc-400">|</li>
-                    <li><a class="flex items-center gap-1" target="_blank" href="https://play.google.com/store/books/details/Joe_Attardi_Modern_CSS?id=kx6LEQAAQBAJ&hl=en_US">Google Play Books <Icon name="ph:arrow-square-out" /></a></li>
-                    <li class="text-zinc-400">|</li>
-                    <li><a class="flex items-center gap-1" target="_blank" href="https://books.apple.com/us/book/modern-css/id6753273690">Apple Books <Icon name="ph:arrow-square-out" /></a></li>
-                    <li class="text-zinc-400">|</li>
-                    <li><a class="flex items-center gap-1" target="_blank" href="https://link.springer.com/book/10.1007/979-8-8688-1727-4">Apress <Icon name="ph:arrow-square-out" /></a></li>
+                <ul class="flex flex-col md:flex-row items-center md:gap-4 flex-wrap justify-center">
+                    <li><a class="flex items-center gap-1 text-blue-600" target="_blank" href="https://www.barnesandnoble.com/w/modern-css-joe-attardi/1137355059?ean=9798868817267">Barnes &amp; Noble <Icon name="ph:arrow-square-out" /></a></li>
+                    <li><a class="flex items-center gap-1 text-blue-600" target="_blank" href="https://play.google.com/store/books/details/Joe_Attardi_Modern_CSS?id=kx6LEQAAQBAJ&hl=en_US">Google Play Books <Icon name="ph:arrow-square-out" /></a></li>
+                    <li><a class="flex items-center gap-1 text-blue-600" target="_blank" href="https://books.apple.com/us/book/modern-css/id6753273690">Apple Books <Icon name="ph:arrow-square-out" /></a></li>
+                    <li><a class="flex items-center gap-1 text-blue-600" target="_blank" href="https://link.springer.com/book/10.1007/979-8-8688-1727-4">Apress <Icon name="ph:arrow-square-out" /></a></li>
                 </ul>
             </div>
             <Image src={bookImage} class="w-48 md:w-1/3 ml-6" alt="Modern CSS book cover" />
